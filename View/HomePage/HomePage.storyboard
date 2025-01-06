@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -230,7 +231,7 @@
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="26" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="lYY-wZ-7hI">
                                                                                     <rect key="frame" x="28" y="3" width="12" height="18"/>
                                                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                                                    <color key="textColor" red="0.20392158627510071" green="0.78039216995239258" blue="0.3490196168422699" alpha="0.84705883264541626" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                    <color key="textColor" name="GreenColor"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                             </subviews>
@@ -263,7 +264,7 @@
                                                                                         <constraint firstAttribute="height" constant="18" id="Isp-D3-1RC"/>
                                                                                     </constraints>
                                                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                                                    <color key="textColor" red="1" green="0.23137256503105164" blue="0.18823529779911041" alpha="0.84705883264541626" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                    <color key="textColor" name="RedColor"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                             </subviews>
@@ -345,6 +346,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="masterView" destination="5EZ-qb-Rvc" id="Bqc-u3-wnB"/>
                         <outlet property="tableView" destination="txS-0k-36K" id="14W-iA-Xra"/>
                     </connections>
                 </viewController>
@@ -359,6 +361,12 @@
         <image name="thumbs-down" width="24" height="24"/>
         <image name="thumbs-up" width="24" height="24"/>
         <image name="user_image" width="480" height="320"/>
+        <namedColor name="GreenColor">
+            <color red="0.20399999618530273" green="0.77999997138977051" blue="0.34900000691413879" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="RedColor">
+            <color red="1" green="0.23100000619888306" blue="0.18799999356269836" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

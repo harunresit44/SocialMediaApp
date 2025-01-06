@@ -7,16 +7,17 @@
 
 import UIKit
 
-struct TabBarSetupController {
+struct UIComponenets {
     
     
     func setupTabBar(view: UIView) {
         
         let tabBarView = UIView()
-        tabBarView.backgroundColor = UIColor(named: "SecondaryColor")
-        tabBarView.layer.shadowOffset = CGSize(width: 0, height: 1)
+        tabBarView.backgroundColor = UIColor(named: "appSecondary")
+        tabBarView.layer.shadowOffset = CGSize(width: 0, height: -1)
         tabBarView.layer.shadowColor = UIColor.black.cgColor
         tabBarView.layer.shadowOpacity = 0.1
+        tabBarView.layer.shadowRadius = 8
         tabBarView.layer.cornerRadius = 10
         tabBarView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(tabBarView)
@@ -76,6 +77,8 @@ struct TabBarSetupController {
 
         
     }
+    
+  
     
     
 }

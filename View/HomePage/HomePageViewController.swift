@@ -13,8 +13,8 @@ class HomePageViewController: BaseViewController, UITableViewDelegate, UITableVi
     
     @IBOutlet weak var tableView: UITableView!
     
-    let tabBarSetupController = TabBarSetupController()
-    
+    let uiComponenets = UIComponenets()
+    @IBOutlet var masterView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,7 @@ class HomePageViewController: BaseViewController, UITableViewDelegate, UITableVi
         tableView.dataSource = self
         tableView.delegate = self
         
-        tabBarSetupController.setupTabBar(view: self.view)
+        uiComponenets.setupTabBar(view: self.view)
         
         
     }

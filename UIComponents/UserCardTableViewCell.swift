@@ -17,9 +17,14 @@ class UserCardTableViewCell: UITableViewCell {
     @IBOutlet weak var userCommentLabel: UILabel!
     @IBOutlet weak var bottomRatingView: UIView!
     
+    let uiComponents = UIComponenets()
+    let homePageViewController = HomePageViewController()
+
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
         
         bottomRatingView.layer.cornerRadius = 10
         
@@ -36,11 +41,18 @@ class UserCardTableViewCell: UITableViewCell {
         userImageImageView.layer.masksToBounds = false
         userImageImageView.layer.cornerRadius = userImageImageView.frame.width / 2
         userImageImageView.clipsToBounds = true
+        
+        let bottomRatingViewTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(bottomRatingViewTapRecognizerAction))
+        bottomRatingView.isUserInteractionEnabled = true
+        bottomRatingView.addGestureRecognizer(bottomRatingViewTapRecognizer)
     
         
         
     }
     
+    @objc func bottomRatingViewTapRecognizerAction() {
+
+    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
