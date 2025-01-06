@@ -7,62 +7,82 @@
 
 import UIKit
 
-class TabBarController: UIViewController {
+struct TabBarSetupController {
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    func setupTabBar(view: UIView) {
         
         let tabBarView = UIView()
-        tabBarView.backgroundColor = .lightGray
-        tabBarView.layer.cornerRadius = 20
+        tabBarView.backgroundColor = UIColor(named: "SecondaryColor")
+        tabBarView.layer.shadowOffset = CGSize(width: 0, height: 1)
+        tabBarView.layer.shadowColor = UIColor.black.cgColor
+        tabBarView.layer.shadowOpacity = 0.1
+        tabBarView.layer.cornerRadius = 10
         tabBarView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(tabBarView)
         
         NSLayoutConstraint.activate([
-            tabBarView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -32),
-            tabBarView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            tabBarView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            tabBarView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40),
+            tabBarView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            tabBarView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -28),
             tabBarView.heightAnchor.constraint(equalToConstant: 48)
-        
+            
         ])
         
-        let buttonTitles = ["Home", "Search", "Profile"]
-                var previousButton: UIButton? = nil
-
-                for title in buttonTitles {
-                    let button = UIButton(type: .system)
-                    button.setTitle(title, for: .normal)
-                    button.setTitleColor(.black, for: .normal)
-                    button.translatesAutoresizingMaskIntoConstraints = false
-                    tabBarView.addSubview(button)
-
-                    // Auto Layout
-                    NSLayoutConstraint.activate([
-                        button.topAnchor.constraint(equalTo: tabBarView.topAnchor),
-                        button.bottomAnchor.constraint(equalTo: tabBarView.bottomAnchor),
-                        button.widthAnchor.constraint(equalToConstant: 100)
-                    ])
-
-                    if let previousButton = previousButton {
-                        button.leadingAnchor.constraint(equalTo: previousButton.trailingAnchor).isActive = true
-                    } else {
-                        button.leadingAnchor.constraint(equalTo: tabBarView.leadingAnchor, constant: 16).isActive = true
-                    }
-
-                    previousButton = button
-                }
-
-                // Son buton sağa hizalansın
-                if let lastButton = previousButton {
-                    lastButton.trailingAnchor.constraint(equalTo: tabBarView.trailingAnchor, constant: -16).isActive = true
-                }
         
+        let buttonIconNames = ["home", "search"]
+
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.alignment = .center
+        stackView.distribution = .equalSpacing
+        stackView.spacing = 0
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+
+        tabBarView.addSubview(stackView)
+
+        for iconName in buttonIconNames {
+            let button = UIButton(type: .system)
+            button.setImage(UIImage(named: iconName), for: .normal)
+            button.imageView?.contentMode = .scaleAspectFit
+            stackView.addArrangedSubview(button)
+            
+            NSLayoutConstraint.activate([
+                button.widthAnchor.constraint(equalToConstant: 24),
+                button.heightAnchor.constraint(equalToConstant: 24)
+            ])
+            
+        }
+
+        NSLayoutConstraint.activate([
+            stackView.leadingAnchor.constraint(equalTo: tabBarView.leadingAnchor, constant: 32),
+            stackView.trailingAnchor.constraint(equalTo: tabBarView.trailingAnchor, constant: -32),
+            stackView.centerYAnchor.constraint(equalTo: tabBarView.centerYAnchor),
+            stackView.heightAnchor.constraint(equalToConstant: 48),
+        ])
+        
+        let profileImageview = UIImageView(image: UIImage(named: "user_image"))
+        profileImageview.contentMode = .scaleAspectFill
+        profileImageview.layer.cornerRadius = 12
+        profileImageview.isUserInteractionEnabled = true
+        profileImageview.clipsToBounds = true
+        
+        NSLayoutConstraint.activate([
+            profileImageview.widthAnchor.constraint(equalToConstant: 24),
+            profileImageview.heightAnchor.constraint(equalToConstant: 24)
+        ])
+        
+        stackView.addArrangedSubview(profileImageview)
+
         
     }
     
     
-    
-    
-    
 }
+
+
+
+
+
+
+
