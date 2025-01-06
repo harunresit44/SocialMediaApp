@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Verify Page View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="VerifyPageID" id="Y6W-OH-hqX" customClass="VerifyPageViewController" customModule="SocialMediaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Doğrulama Kodu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVE-5L-Gbf">
+                                <rect key="frame" x="16" y="89" width="235" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="seI-el-gwT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="28"/>
+                                <color key="textColor" red="0.51372549020000002" green="0.33333333329999998" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kaydınızı doğrulamak için telefonunuza SMS gelen doğrulama kodunu girin." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Blt-WX-3CE">
+                                <rect key="frame" x="16" y="139" width="361" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="MrW-SB-FoO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.43137254899999999" green="0.43137254899999999" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" spacing="12" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Kw-P1-zxa">
+                                <rect key="frame" x="21" y="205" width="351" height="48"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="12" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ExL-ef-W25">
+                                        <rect key="frame" x="0.0" y="0.0" width="351" height="48"/>
+                                        <color key="backgroundColor" red="0.96862745098039216" green="0.97254901960784312" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.60392156860000001" green="0.60392156860000001" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits" textContentType="one-time-code"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="tDD-4W-Z3w"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="02:48" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TLL-ae-KOs">
+                                <rect key="frame" x="163" y="283" width="66" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="6kS-se-SRV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ATJ-zF-8HV">
+                                <rect key="frame" x="133" y="322" width="126" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="8Jc-9Z-8O5"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Tekrar Gönder" subtitle="" titleAlignment="center">
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="14"/>
+                                    <color key="baseForegroundColor" red="0.51372549020000002" green="0.33333333329999998" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="sendAgainButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="fW6-ko-XjQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UiA-XR-2Ly">
+                                <rect key="frame" x="16" y="387" width="361" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="Myc-4g-4mR"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Doğrula">
+                                    <color key="baseBackgroundColor" red="0.51372549020000002" green="0.33333333329999998" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="verifyButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="SXY-4d-gXO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ATJ-zF-8HV" firstAttribute="top" secondItem="TLL-ae-KOs" secondAttribute="bottom" constant="12" id="6Zd-e0-KWs"/>
+                            <constraint firstItem="TLL-ae-KOs" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="163" id="Dn5-Bz-OgT"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Blt-WX-3CE" secondAttribute="trailing" constant="16" id="Gvh-HB-paP"/>
+                            <constraint firstItem="SVE-5L-Gbf" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="HTd-St-r2c"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="UiA-XR-2Ly" secondAttribute="trailing" constant="16" id="I22-DT-tYd"/>
+                            <constraint firstItem="UiA-XR-2Ly" firstAttribute="top" secondItem="ATJ-zF-8HV" secondAttribute="bottom" constant="44" id="JGA-g5-Wvz"/>
+                            <constraint firstItem="2Kw-P1-zxa" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="21" id="K8G-8B-mJR"/>
+                            <constraint firstItem="ATJ-zF-8HV" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="133" id="KNA-Gu-nwK"/>
+                            <constraint firstItem="UiA-XR-2Ly" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="Tba-fG-xnX"/>
+                            <constraint firstItem="2Kw-P1-zxa" firstAttribute="top" secondItem="Blt-WX-3CE" secondAttribute="bottom" constant="24" id="YgW-bC-oUL"/>
+                            <constraint firstItem="TLL-ae-KOs" firstAttribute="top" secondItem="2Kw-P1-zxa" secondAttribute="bottom" constant="30" id="ZGx-Zc-g8y"/>
+                            <constraint firstItem="Blt-WX-3CE" firstAttribute="top" secondItem="SVE-5L-Gbf" secondAttribute="bottom" constant="8" id="apK-xv-Pp0"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ATJ-zF-8HV" secondAttribute="trailing" constant="134" id="hg5-Pk-HZ6"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="SVE-5L-Gbf" secondAttribute="trailing" constant="142" id="mX3-5l-DYk"/>
+                            <constraint firstItem="Blt-WX-3CE" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="niZ-9D-vgj"/>
+                            <constraint firstItem="SVE-5L-Gbf" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="oYg-m1-XN7"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="TLL-ae-KOs" secondAttribute="trailing" constant="164" id="uhZ-fH-uk6"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="2Kw-P1-zxa" secondAttribute="trailing" constant="21" id="wz9-wh-kP3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="countDownTextField" destination="TLL-ae-KOs" id="B6b-8q-TNI"/>
+                        <outlet property="verifyButton" destination="UiA-XR-2Ly" id="4JY-vp-f6U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="55.725190839694655" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
